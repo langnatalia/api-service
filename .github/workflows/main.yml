@@ -1,0 +1,22 @@
+name: API Service Workflow
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Print a message
+        run: echo "API Service workflow triggered"
+      - name: Build the API Service
+        run: |
+          echo "Building API Service..."
+          # Add build command here
+          # e.g. npm install && npm run build
+          echo "API Service built successfully"
